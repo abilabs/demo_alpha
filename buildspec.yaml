@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        python: 3.6
+  build:
+    commands:
+      - conda env create -f environment.yml
+      - source postBuild
+      - source activate reproduce-chexnet
